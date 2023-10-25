@@ -1,3 +1,7 @@
+# Amazon Bedrock Node.js Samples
+
+This repository contains Node.js examples to get started with the Amazon Bedrock service.
+
 ## Installation
 
 ```bash
