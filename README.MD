@@ -35,3 +35,8 @@ If your application is running on an AWS resource with an associated IAM role, i
 ```bash
 node text/claude.mjs
 ```
+
+```bash
+node image/stable-diffusion-simple.mjs
+node image/stable-diffusion.mjs
+```

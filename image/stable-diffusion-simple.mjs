@@ -11,37 +11,17 @@ import { dirname } from "path";
 // Create a BedrockRuntimeClient with your configuration
 const client = new BedrockRuntimeClient({ region: "us-east-1" });
 
-const prompt = "a beautiful mountain landscape";
-const negativePrompts = [
-  "poorly rendered",
-  "poor background details",
-  "poorly drawn mountains",
-  "disfigured mountain features",
-];
-const stylePreset = "photographic"; // (e.g. photographic, digital-art, cinematic, ...)
-const clipGuidancePreset = "FAST_GREEN"; // (e.g. FAST_BLUE FAST_GREEN NONE SIMPLE SLOW SLOWER SLOWEST)
-const sampler = "K_DPMPP_2S_ANCESTRAL"; // (e.g. DDIM, DDPM, K_DPMPP_SDE, K_DPMPP_2M, K_DPMPP_2S_ANCESTRAL, K_DPM_2, K_DPM_2_ANCESTRAL, K_EULER, K_EULER_ANCESTRAL, K_HEUN)
-const width = 768;
-
-const textPrompts = [
-  { text: prompt, weight: 1.0 },
-  ...negativePrompts.map((negprompt) => ({ text: negprompt, weight: -1.0 })),
-];
+const prompt = "Sri lanka tea plantation.";
 
 const input = {
   modelId: "stability.stable-diffusion-xl-v0",
   contentType: "application/json",
   accept: "application/json",
   body: JSON.stringify({
-    text_prompts: textPrompts,
-    cfg_scale: 5,
-    // If you want to set a seed, specify the seed value below
-    // seed: 452345,
+    text_prompts: [{ text: prompt }],
+    cfg_scale: 10,
+    seed: 0,
     steps: 50,
-    style_preset: stylePreset,
-    clip_guidance_preset: clipGuidancePreset,
-    sampler: sampler,
-    width: width,
   }),
 };
 
@@ -99,11 +79,14 @@ const imageBuffer = Buffer.from(base64Data, "base64");
 // Generate a timestamp (e.g., current date and time)
 const timestamp = new Date().toISOString().replace(/[-T:.Z]/g, "");
 
-// Trim the prompt text to not exceed 100 characters
-const trimmedPrompt = prompt.slice(0, 100);
+// Trim the prompt text to not exceed 20 characters
+const trimmedPrompt = prompt.slice(0, 20);
+
+// Remove all special characters from the prompt
+const promptWithoutSpecialChars = trimmedPrompt.replace(/[^\w\s]/g, "");
 
 // Create a prompt slug by replacing spaces with hyphens
-const promptSlug = trimmedPrompt.replace(/\s+/g, "-");
+const promptSlug = promptWithoutSpecialChars.replace(/\s+/g, "-");
 
 // Get the current directory
 const currentDir = dirname(fileURLToPath(import.meta.url));
