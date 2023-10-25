@@ -1,0 +1,23 @@
+{
+  "name": "amazon-bedrock-node-js-samples",
+  "version": "1.0.0",
+  "description": "",
+  "main": "list-foundation-models.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YAV-AI/amazon-bedrock-node-js-samples.git"
+  },
+  "author": "YAV.AI",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/YAV-AI/amazon-bedrock-node-js-samples/issues"
+  },
+  "homepage": "https://github.com/YAV-AI/amazon-bedrock-node-js-samples#readme",
+  "dependencies": {
+    "@aws-sdk/client-bedrock": "^3.435.0",
+    "@aws-sdk/client-bedrock-runtime": "^3.435.0"
+  }
+}
