@@ -38,5 +38,4 @@ node text/claude.mjs
 
 ```bash
 node image/stable-diffusion-simple.mjs
-node image/stable-diffusion.mjs
 ```
