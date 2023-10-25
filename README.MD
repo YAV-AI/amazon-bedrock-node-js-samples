@@ -39,3 +39,8 @@ node text/claude.mjs
 ```bash
 node image/stable-diffusion-simple.mjs
 ```
+
+## Further reading
+
+https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/bedrock/
+https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/bedrock-runtime/
