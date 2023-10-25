@@ -11,7 +11,7 @@ const input = {
   contentType: "application/json",
   accept: "*/*",
   body: JSON.stringify({
-    prompt: 'Translate the word "Good Morning" to French\n\nBonjour',
+    prompt: 'Translate the word "Good Morning" to French',
     max_tokens: 400,
     temperature: 0.75,
     p: 0.01,
