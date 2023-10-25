@@ -9,7 +9,7 @@ const client = new BedrockRuntimeClient({ region: "us-east-1" });
 const input = {
   modelId: "amazon.titan-embed-text-v1",
   contentType: "application/json",
-  accept: "*/*",
+  accept: "application/json",
   body: JSON.stringify({
     inputText: "this is where you place your input text",
   }),
