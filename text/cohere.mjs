@@ -72,7 +72,6 @@ console.log("-------------------------");
 //   prompt: 'Translate the word "Good Morning" to French\n\nBonjour'
 // }
 
-// Answers are in parsedResponse.generations
 console.log("-------------------------");
 console.log("----Generation Result----");
 console.log("-------------------------");

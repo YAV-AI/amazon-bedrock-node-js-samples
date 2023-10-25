@@ -74,7 +74,6 @@ console.log("-------------------------");
 //   completions: [ { data: [Object], finishReason: [Object] } ]
 // }
 
-// Answers are in parsedResponse.completions[0].data.text
 console.log("-------------------------");
 console.log("----Completion Result----");
 console.log("-------------------------");
