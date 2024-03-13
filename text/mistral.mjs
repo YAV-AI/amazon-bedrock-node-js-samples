@@ -64,6 +64,16 @@ console.log(parsedResponse);
 console.log("-------------------------");
 // Output:
 // {
-//   completion: " I'm doing well, thanks for asking!",
-//   stop_reason: 'stop_sequence'
+//   outputs: [
+//     {
+//       text:
+//         "Yes, indeed! Here's a simple recipe for homemade mayonnaise:\n" +
+//         "\n" +
+//         "Ingredients:\n" +
+//         "- 1 egg yolk\n" +
+//         "- 1 tablespoon of mustard (Dijon is a good choice)\n" +
+//         "..."
+//       stop_reason: "stop",
+//     },
+//   ];
 // }
