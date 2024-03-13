@@ -21,7 +21,9 @@ const negativePrompts = [
 const stylePreset = "photographic"; // (e.g. photographic, digital-art, cinematic, ...)
 const clipGuidancePreset = "FAST_GREEN"; // (e.g. FAST_BLUE FAST_GREEN NONE SIMPLE SLOW SLOWER SLOWEST)
 const sampler = "K_DPMPP_2S_ANCESTRAL"; // (e.g. DDIM, DDPM, K_DPMPP_SDE, K_DPMPP_2M, K_DPMPP_2S_ANCESTRAL, K_DPM_2, K_DPM_2_ANCESTRAL, K_EULER, K_EULER_ANCESTRAL, K_HEUN)
+
 const width = 768;
+const height = 1024;
 
 const textPrompts = [
   { text: prompt, weight: 1.0 },
@@ -29,7 +31,7 @@ const textPrompts = [
 ];
 
 const input = {
-  modelId: "stability.stable-diffusion-xl-v0",
+  modelId: "stability.stable-diffusion-xl-v1",
   contentType: "application/json",
   accept: "application/json",
   body: JSON.stringify({
@@ -42,6 +44,7 @@ const input = {
     clip_guidance_preset: clipGuidancePreset,
     sampler: sampler,
     width: width,
+    height: height,
   }),
 };
 

@@ -11,17 +11,20 @@ import { dirname } from "path";
 // Create a BedrockRuntimeClient with your configuration
 const client = new BedrockRuntimeClient({ region: "us-east-1" });
 
-const prompt = "Sri lanka tea plantation.";
+const prompt = "A lighthouse on a cliff";
 
 const input = {
-  modelId: "stability.stable-diffusion-xl-v0",
+  modelId: "stability.stable-diffusion-xl-v1",
   contentType: "application/json",
   accept: "application/json",
   body: JSON.stringify({
-    text_prompts: [{ text: prompt }],
+    text_prompts: [{ text: prompt, weight: 1 }],
     cfg_scale: 10,
-    seed: 0,
-    steps: 50,
+    // If you want to set a seed, specify the seed value below
+    // seed: 452345,
+    steps: 30,
+    width: 512,
+    height: 512,
   }),
 };
 
