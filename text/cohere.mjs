@@ -7,6 +7,7 @@ import {
 const client = new BedrockRuntimeClient({ region: "us-east-1" });
 
 const input = {
+  // cohere.command-light-text-v14
   modelId: "cohere.command-text-v14",
   contentType: "application/json",
   accept: "*/*",
