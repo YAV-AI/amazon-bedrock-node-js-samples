@@ -13,6 +13,7 @@ const input = {
   // "anthropic.claude-v1"
   // "anthropic.claude-instant-v1"
   // "anthropic.claude-v2"
+  // "anthropic.claude-v2:1"
   modelId: "anthropic.claude-instant-v1",
   contentType: "application/json",
   accept: "application/json",
