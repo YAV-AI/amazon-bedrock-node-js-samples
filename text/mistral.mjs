@@ -16,7 +16,8 @@ It adds just the right amount of zesty flavour to whatever I'm cooking up in the
 const input = {
   // You can change the modelId
   // mistral.mistral-7b-instruct-v0:2
-  modelId: "mistral.mixtral-8x7b-instruct-v0:1",
+  // mistral.mixtral-8x7b-instruct-v0:1
+  modelId: "mistral.mistral-large-2402-v1:0",
   contentType: "application/json",
   accept: "application/json",
   body: JSON.stringify({
@@ -59,7 +60,7 @@ const parsedResponse = JSON.parse(jsonString);
 console.log("-------------------------");
 console.log("---Parsed Response Body---");
 console.log("-------------------------");
-// Answers are in parsedResponse.completion
+// Answers are in parsedResponse.outputs[0].text
 console.log(parsedResponse);
 console.log("-------------------------");
 // Output:
