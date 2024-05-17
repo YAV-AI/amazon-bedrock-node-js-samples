@@ -18,7 +18,8 @@ Let's think step by step
 const input = {
   // You can change the modelId
   // meta.llama2-70b-chat-v1
-  modelId: "meta.llama2-13b-chat-v1",
+  // meta.llama3-8b-instruct-v1:0
+  modelId: "meta.llama3-70b-instruct-v1:0",
   contentType: "application/json",
   accept: "application/json",
   body: JSON.stringify({
