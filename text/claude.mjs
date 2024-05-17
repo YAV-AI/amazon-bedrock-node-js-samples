@@ -55,7 +55,7 @@ const jsonString = new TextDecoder().decode(rawRes);
 const parsedResponse = JSON.parse(jsonString);
 
 console.log("-------------------------");
-console.log("---Pased Response Body---");
+console.log("---Parsed Response Body---");
 console.log("-------------------------");
 // Answers are in parsedResponse.completion
 console.log(parsedResponse);
